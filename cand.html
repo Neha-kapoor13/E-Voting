@@ -1,0 +1,351 @@
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>E-Voting</title>
+
+<script>
+function show()
+{
+var dis=document.getElementById("list").value;
+switch(dis) 
+{
+  case "s":
+document.getElementById("targets").style.display="block"; 
+    document.getElementById("targete").style.display="none"
+document.getElementById("targetw").style.display="none" 
+ document.getElementById("targetn").style.display="none"; 
+
+    break;
+  case "n":
+ document.getElementById("targetn").style.display="block";
+document.getElementById("targets").style.display="none";
+document.getElementById("targete").style.display="none";
+document.getElementById("targetw").style.display="none";
+
+break;
+	case "e":
+document.getElementById("targete").style.display="block";
+document.getElementById("targets").style.display="none";
+document.getElementById("targetw").style.display="none";
+document.getElementById("targetn").style.display="none";
+
+break;
+
+	case "w":
+document.getElementById("targetw").style.display="block";
+document.getElementById("targets").style.display="none";
+document.getElementById("targete").style.display="none";
+document.getElementById("targetn").style.display="none";
+break;
+	default:
+document.getElementById("targetn").style.display="none"; 
+document.getElementById("targets").style.display="none"; 
+document.getElementById("targete").style.display="none";
+document.getElementById("targetw").style.display="none";
+}
+}
+
+</script>
+
+
+  <style>
+
+      .parasize{
+        font-size:1.25rem;
+      }
+      .opac
+      {
+        opacity: 0.8;
+      }
+      .bgimg {
+        background-image: url("im/bgg.jpg");
+        height: auto;
+        width: 100%;
+	
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+table
+{
+background-attachment: fixed;
+background-size: 100% 100%;
+border-collapse: seperate;
+margin-left:50;
+}
+td,tr {
+  text-align: left;
+border: 10px solid white;
+font-size:30px;
+font-weight: bolder;
+color:white;
+}
+
+    </style>
+  </head>
+  <body class="bgimg">
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="im/logo.png" width="30" height="30" alt="GV">
+      </a>
+      <a class="navbar-brand" href="">E-Voting</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colap" aria-controls="colap" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="colap">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">HOME &nbsp;&nbsp;</a>
+          </li>
+     
+          <li class="nav-item">
+            <a class="nav-link" href="camp.html">E-CAMPAIGNS&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+<a class="nav-link" href="cand.html">CANDIDATES &nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sch.html">E-VOTING SCHEDULE&nbsp;&nbsp;</a>
+          </li>
+	  <li class="nav-item">
+      <li class="nav-item">
+<a class="nav-link" href ="webrun:C:\Users\Neha kapoor\MINOR2\vote.bat - Shortcut.lnk">VOTE&nbsp;&nbsp;</a>
+          </li>
+            <a class="nav-link" href="webrun:C:\Users\Neha kapoor\MINOR2\result.bat - Shortcut.lnk">RESULTS&nbsp;&nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="webrun:C:\Users\Neha kapoor\MINOR2\feedback.bat - Shortcut.lnk">FEEDBACK&nbsp;&nbsp;</a>
+          </li>
+	<li class="nav-item">
+                  <a class="nav-link" href="webrun:C:\Users\Neha kapoor\MINOR2\registration.bat - Shortcut.lnk">REGISTRATION&nbsp;&nbsp;</a>
+                </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <link rel="stylesheet" href="bootstrap.min.css">
+<br><br><br><br>
+<center><img src="im/cd.png" width="450" height="100">
+<br><br>
+<b> <font size="20" color="white" face="calibri">
+Select state
+<select>
+<option> DELHI</option>
+<option> MAHARASHTRA</option>
+<option> UTTAR PRADESH</option>
+<option> MADHYA PRADESH</option>
+<option> KERALA</option>
+<option> RAJASTHAN</option>
+<option> PUNJAB</option>
+<option> TAMIL NADU</option>
+<option> ASSAM</option>
+<option> WEST BENGAL</option>
+<option> ANDHRA PRADESH</option>
+<option> GUJRAT</option>
+<option> MEGHALAYA</option>
+<option> MANIPUR</option>
+<option> MIZORAM</option>
+<option> ARUNACHAL PRADESH</option>
+<option> GOA</option>
+<option> ANDAMAN AND NICOBAR ISLANDS</option>
+<option> HARYANA</option>
+<option> ORISSA</option>
+<option> SIKKIM</option>
+<option> UTTRAKHAND</option>
+<option> JHARKHAND</option>
+<option> TRIPURA</option>
+</select>
+&nbsp;&nbsp;&nbsp;
+Select district
+<select id="list">
+<option value="select"> <i>Select</i></option>
+<option value="e"> EAST</option>
+<option value="w"> WEST</option>
+<option value="n"> NORTH</option>
+<option value="s"> SOUTH</option>
+</select>
+</font>
+<br><br>
+<input type="button" value="SEARCH" onClick="show()" style="background-color:orange;font-size:40;font-face:calibri;">
+<br>
+<br>
+</center>
+<table width="600" id="targets" style="display:none;">
+<tr>
+ <td>1 </td>&nbsp; 
+<td><img src="im/bjp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/11.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ak.jpg" style="width:150px;height:100px"></td>
+<td>MR. SONU SINGH</td>
+</tr>
+<tr>
+ <td>2</td>
+<td><img src="im/cong.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/22.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/sk.jpg" style="width:150px;height:100px"></td>
+<td>MR. PAWAN MISHRA</td>
+</tr>
+<tr>
+<td>3</td> 
+<td><img src="im/aap.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/33.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/bk.jpg" style="width:150px;height:100px"></td>
+<td>MR. KARAN VERMA</td>
+</tr>
+<tr>
+<td>4</td> 
+<td><img src="im/bsp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/44.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ck.jpg" style="width:150px;height:100px"></td>
+<td>MR. X DUBEY</td>
+</tr>
+<tr>
+<td>5</td> 
+<td><img src="im/cpi.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/55.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/pk.jpg" style="width:150px;height:100px"></td>
+<td>MR. DHRUV KRISHNAN</td>
+</tr>
+<tr>
+<td>6</td> 
+<td><img src="im/sp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/66.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ek.jpg" style="width:150px;height:100px"></td>
+<td>MR. PANKAJ SARABHAI</td>
+</tr>
+</table>
+
+<table width="600" id="targete" style="display:none;">
+<tr>
+<td>1</td> 
+<td><img src="im/bjp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/11.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/nk.jpg" style="width:150px;height:100px"></td>
+<td>MR. SK SAMSON</td>
+</tr>
+<tr>
+<td>2</td>
+<td><img src="im/cong.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/22.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/fk.jpg" style="width:150px;height:100px"></td>
+<td>MR. PK MUNHI</td>
+</tr>
+<tr>
+
+<td>3</td><td><img src="im/aap.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/33.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/gk.jpg" style="width:150px;height:100px"></td>
+<td>MR. KK KUMAR</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="im/bsp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/44.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/hk.jpg" style="width:150px;height:100px"></td>
+<td>MR. TONY DUBEY</td>
+</tr>
+<tr>
+<td>5</td> 
+<td><img src="im/cpi.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/55.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ik.jpg" style="width:150px;height:100px"></td>
+<td>MR. DK KRISHNA</td>
+</tr>
+<tr>
+<td>6</td> 
+<td><img src="im/sp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/66.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/sk.jpg" style="width:150px;height:100px"></td>
+<td>MR. PP GANDHI</td>
+</tr>
+</table>
+
+<table width="600" id="targetn" style="display:none;">
+<tr>
+<td>1</td> 
+<td><img src="im/bjp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/11.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/kk.jpg" style="width:150px;height:100px"></td>
+<td>MR. RAM BANERJEE</td>
+</tr>
+<tr>
+<td>2</td> 
+<td><img src="im/cong.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/22.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/sk.jpg" style="width:150px;height:100px"></td>
+<td>MR. DHEERAJ RAWAT</td>
+</tr>
+<tr>
+<td>3</td> 
+<td><img src="im/aap.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/33.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ok.jpg" style="width:150px;height:100px"></td>
+<td>MR. CHAMAN SINGH</td>
+</tr>
+<tr>
+<td>4</td> 
+<td><img src="im/bsp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/44.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/jk.jpg" style="width:150px;height:100px"></td>
+<td>MR. ANIL KUMAR</td>
+</tr>
+<tr>
+<td>5</td> 
+<td><img src="im/cpi.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/55.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/nk.jpg" style="width:150px;height:100px"></td>
+<td>MR. HEMANT RANA</td>
+</tr>
+<tr>
+<td>6</td> 
+<td><img src="im/sp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/66.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/lk.jpg" style="width:150px;height:100px"></td>
+<td>MR. MK MODI</td>
+</tr>
+</table>
+
+<table width="600" id="targetw" style="display:none;">
+<tr>
+<td>1</td> 
+<td><img src="im/bjp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/11.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/pk.jpg" style="width:150px;height:100px"></td>
+<td>MR. SK SINGH</td>
+</tr>
+<tr>
+<td>2</td> 
+<td><img src="im/cong.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/22.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/mk.jpg" style="width:150px;height:100px"></td>
+<td>MR. PK MISHRA</td>
+</tr>
+<tr>
+<td>3</td> 
+<td><img src="im/aap.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/33.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ak.jpg" style="width:150px;height:100px"></td>
+<td>MR. KK VERMA</td>
+</tr>
+<tr>
+<td>4</td> 
+<td><img src="im/bsp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/44.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/ok.jpg" style="width:150px;height:100px"></td>
+<td>MR. X DUBEY</td>
+</tr>
+<tr>
+<td>5</td> 
+<td><img src="im/cpi.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/55.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/qk.jpg" style="width:150px;height:100px"></td>
+<td>MR. DK KRISHNAN</td>
+</tr>
+<tr>
+<td>6</td> 
+<td><img src="im/sp.jpg" style="width:100px;height:100px">&nbsp;&nbsp;<img src="im/66.png" style="width:400px;height:50px">&nbsp;&nbsp;</td>
+<td><img src="im/sk.jpg" style="width:150px;height:100px"></td>
+<td>MR. PP SARABHAI</td>
+</tr>
+</table>
+
+<footer>
+        <p class="text-center bg-dark text-white my-3 p-3">
+          ©copyright E-Voting 2021
+        </p>
+      </footer>
+</body>
+
+</html>
+
+
+
+
+
+
